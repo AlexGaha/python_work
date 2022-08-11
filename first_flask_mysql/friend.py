@@ -1,5 +1,6 @@
 from mysqlconnection import connectToMySQL
 # model the class after the friend table from our database
+DATABASE = 'friends'
 class Friend:
     def __init__( self , data ):
         self.id = data['id']
@@ -13,7 +14,8 @@ class Friend:
     def get_all(cls):
         query = "SELECT * FROM friends;"
         # make sure to call the connectToMySQL function with the schema you are targeting.
-        results = connectToMySQL('friends').query_db(query)
+        results = connectToMySQL(DATABASE).query_db(query)
+        print(results)
         # Create an empty list to append our instances of friends
         friends = []
         # Iterate over the db results and create instances of friends with cls.

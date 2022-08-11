@@ -11,7 +11,7 @@ def index():
 
 
     print(friends)
-    return render_template("index.html")
+    return render_template("index.html", friends = friends)
 
 if __name__ == "__main__":
     app.run(debug=True)

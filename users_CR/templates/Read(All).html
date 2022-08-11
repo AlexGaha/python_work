@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FIRST FLASK</title>
+    <title>Read(ALL)</title>
 </head>
 <body>
-    {{friend}}
-    <h1>Si senor</h1>
-{% for friend in friends %}
-    <p>{{friend.first_name}} {{friend.last_name}}</p>
-    <p>{{friend.occupation}}</p>
-{% endfor %}
-
+    <h1>hello</h1>
+        {% for user in users %}
+            <p>{{user.first_name}} {{user.last_name}} {{user.email}}</p>
+        {% endfor %}
 </body>
 </html>
